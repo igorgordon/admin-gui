@@ -1,0 +1,104 @@
+<div class="container-fluid">
+
+  <!--<div class="row-fluid">-->
+    <!--<div class="span2">-->
+      <!--&lt;!&ndash;Sidebar content&ndash;&gt;-->
+
+      <!--Search: <input ng-model="query">-->
+      <!--Sort by:-->
+      <!--<select ng-model="orderProp">-->
+        <!--<option value="name">Alphabetical</option>-->
+        <!--<option value="age">Newest</option>-->
+      <!--</select>-->
+
+    <!--</div>-->
+    <div class="span10">
+
+        <ul class="phones">
+            <li class="thumbnail">
+                Id:<ul>{{user.id}}</ul>
+                Name:<input type="text" ng-model="user.name"  value="user.name" required=""/>
+                <img ng-src="{{user.avatarURL}}"></a>
+                General:
+                </br>
+                VirtualBalance:<input type="text" ng-model="user.general.virtualBalance" value="user.general.virtualBalance" required=""/>
+                <!--<ul>VirtualBalance:{{user.general.virtualBalance}}</ul>-->
+
+                RealBalance:
+                    <input id = "realBalance" type="text" ng-model="user.general.realBalance" value="user.general.realBalance" required=""/></br>
+                    <!--Level:<input type="text" ng-model="user.general.level" value="user.general.level" required=""/></br>-->
+                    Level:{{user.general.level}}
+                    Xp:<input id = "generalXP" type="text" ng-model="user.general.xp" value="user.general.xp" required=""/></br>
+                    Winnings:{{user.general.winnings}}
+
+                <!--Tier:<input type="text" ng-model="user.general.tier" value="user.general.tier" required=""/></br>-->
+                Tier:{{user.general.tier}}
+                </br>
+
+                Blackjack:
+                </br>
+                    <!--Level:<input type="text" ng-model="user.blackjack.level" value="user.blackjack.level" required=""/></br>-->
+                    <ul>Level:{{user.blackjack.level}}</ul>
+                    <ul>Xp:<input id = "blackjackXP" type="text" ng-model="user.blackjack.xp" value="user.blackjack.xp" required=""/></ul>
+                    <!--Winnings:<input type="text" ng-model="user.blackjack.winnings" value="user.blackjack.winnings" required=""/></br>-->
+                    <ul>Winnings:{{user.blackjack.winnings}}</ul>
+                    <!--</ul>-->
+                </br>
+                Slots:
+                </br>
+                    <!--Level:<input type="text" ng-model="user.slots.level" value="user.slots.level" required=""/></br>-->
+                    <ul>Level:{{user.slots.level}}</ul>
+                    Xp:<input id = "slotsXP" type="text" ng-model="user.slots.xp" value="user.slots.xp" required=""/></br>
+                    <!--Winnings:<input type="text" ng-model="user.slots.winnings" value="user.slots.winnings" required=""/></br>-->
+                    <ul>Winnings:{{user.slots.winnings}}</ul>
+                    <!--</ul>-->
+                </br>
+                Roulette:
+                </br>
+                    <!--<ul ng-repeat="roulette in user.roulette">-->
+                    <!--Level:<input type="text" ng-model="user.roulette.level" value="user.roulette.level" required=""/></br>-->
+                    <ul>Level:{{user.roulette.level}}</ul>
+                    <ul>Xp:<input id = "rouletteXP" type="text" ng-model="user.roulette.xp" value="user.roulette.xp" required=""/></ul>
+                    <!--Winnings:<input type="text" ng-model="user.roulette.winnings" value="user.roulette.winnings" required=""/></br>-->
+                    <ul>Winnings:{{user.roulette.winnings}}</ul>
+                <button ng-click="update(user.id,user.general.realBalance - realBalance.value,
+                                                 user.general.xp - generalXP.value,
+                                                 user.blackjack.xp - deltaBlackjackXP.value,
+                                                 user.slots.xp - deltaSlotsXP.value,
+                                                 user.roulette.xp - deltaRouletteXP.value)">SAVE</button>
+                    <!--</ul>-->
+
+
+
+                    <!--
+                                    <ul>Tier:{{user.general.tier}}</ul>
+                                    &lt;!&ndash;</ul>&ndash;&gt;
+
+                Blackjack:
+                &lt;!&ndash;<ul ng-repeat="blackjack in user.blackjack">&ndash;&gt;
+                <ul>Level:{{user.blackjack.level}}</ul>
+                <ul>Xp:{{user.blackjack.xp}}</ul>
+                <ul>Winnings:{{user.blackjack.winnings}}</ul>
+                &lt;!&ndash;</ul>&ndash;&gt;
+
+                Slots:
+                &lt;!&ndash;<ul ng-repeat="slots in user.slots">&ndash;&gt;
+                <ul>Level:{{user.slots.level}}</ul>
+                <ul>Xp:{{user.slots.xp}}</ul>
+                <ul>Winnings:{{user.slots.winnings}}</ul>
+                &lt;!&ndash;</ul>&ndash;&gt;
+
+                Roulette:
+                &lt;!&ndash;<ul ng-repeat="roulette in user.roulette">&ndash;&gt;
+                <ul>Level:{{user.roulette.level}}</ul>
+                <ul>Xp:{{user.roulette.xp}}</ul>
+                <ul>Winnings:{{user.roulette.winnings}}</ul>
+                &lt;!&ndash;</ul>&ndash;&gt;
+-->
+
+                </br>
+            </li>
+        </ul>
+    </div>
+  </div>
+</div>
