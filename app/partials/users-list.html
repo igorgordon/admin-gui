@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+
+      <div class="span2">
+      &lt;!&ndash;Sidebar content&ndash;&gt;
+      Search3: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+
+    </div>
+
+<!--      <div class="span10">
+
+          <form ng-submit="searchServer()" ng-controller="SearchCtrl">
+              Enter text and hit enter:
+              <input type="text" ng-model="text" name="text" />
+              <input type="submit" id="submit" value="Submit" />
+          </form>
+      </div>-->
+
+    <div class="span10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="user in users | filter:query | orderBy:orderProp" class="thumbnail">
+          <a href="#/users/{{user.id}}" class="thumb"><img ng-src="{{user.avatarURL}}"></a>
+          <a href="#/users/{{user.id}}">{{user.name}}</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>

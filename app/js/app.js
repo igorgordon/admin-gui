@@ -5,13 +5,16 @@
 angular.module('phonecat', ['phonecatFilters', 'phonecatServices']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider.
-            when('/phones', {templateUrl: 'partials/phone-list.html',   controller: PhoneListCtrl}).
-            when('/phones/:phoneId', {templateUrl: 'partials/phone-detail.html', controller: PhoneDetailCtrl}).
-            when('/users/:userId', {templateUrl: 'partials/userDetails.html', controller: UserDetailCtrl}).
-            when('/levels', {templateUrl: 'partials/levelProgression-list.html', controller: LevelListCtrl}).
+            when('/users',           {templateUrl: 'partials/users-list.html',controller: UserListCtrl}).
+            when('/phones/:phoneId', {templateUrl: 'partials/phone-detail.html',controller: PhoneDetailCtrl}).
+            when('/users/:userId',   {templateUrl: 'partials/userDetails.html',controller: UserDetailCtrl}).
+            when('/levels',          {templateUrl: 'partials/levelProgression-list.html',controller: LevelListCtrl}).
+            when('/search',          {templateUrl: 'partials/search.html', controller: SearchCtrl}).
+            when('/tester',          {templateUrl: 'partials/tester.html', controller: SearchCtrl}).
+//          when('/index',           {templateUrl: 'index.html', controller: IndexCtrl}).
 
-            otherwise({redirectTo: '/levels'});
-//            otherwise({redirectTo: '/phones'});
+//            otherwise({redirectTo: '/index'});
+            otherwise({redirectTo: '/search'});
 
 
     }]);

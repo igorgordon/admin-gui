@@ -15,21 +15,22 @@
     <div class="span10">
 
         <ul class="phones">
-            <li class="thumbnail">
+            <!--<li class="thumbnail">-->
+            <li>
                 Id:<ul>{{user.id}}</ul>
                 Name:<input type="text" ng-model="user.name"  value="user.name" required=""/>
+                </br>
                 <img ng-src="{{user.avatarURL}}"></a>
+                </br>
                 General:
                 </br>
-                VirtualBalance:<input type="text" ng-model="user.general.virtualBalance" value="user.general.virtualBalance" required=""/>
+                VirtualBalance:<input type="text" ng-model="user.general.virtualBalance" value="user.general.virtualBalance" required=""/></br>
                 <!--<ul>VirtualBalance:{{user.general.virtualBalance}}</ul>-->
-
-                RealBalance:
-                    <input id = "realBalance" type="text" ng-model="user.general.realBalance" value="user.general.realBalance" required=""/></br>
+                RealBalance:<input id = "realBalance" type="text" ng-model="user.general.realBalance" value="user.general.realBalance" required=""/></br>
                     <!--Level:<input type="text" ng-model="user.general.level" value="user.general.level" required=""/></br>-->
-                    Level:{{user.general.level}}
+                    Level:{{user.general.level}}</br>
                     Xp:<input id = "generalXP" type="text" ng-model="user.general.xp" value="user.general.xp" required=""/></br>
-                    Winnings:{{user.general.winnings}}
+                    Winnings:{{user.general.winnings}}</br>
 
                 <!--Tier:<input type="text" ng-model="user.general.tier" value="user.general.tier" required=""/></br>-->
                 Tier:{{user.general.tier}}
@@ -102,3 +103,19 @@
     </div>
   </div>
 </div>
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+        <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+            <p>I'm in Section 1.</p>
+        </div>
+        <div class="tab-pane" id="tab2">
+            <p>Howdy, I'm in Section 2.</p>
+        </div>
+    </div>
+</div>
+
