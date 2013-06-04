@@ -30,7 +30,7 @@ var usersGlobal;
 function UserListCtrl($scope, User, $http) {
     $scope.users = usersGlobal;
     $scope.searchServer = function() {
-        var getResult = $http.get(serverURL + '/users?name='+this.text + '&start=0&size=200');
+        var getResult = $http.get(config.serverURL + '/users?name='+this.text + '&start=0&size=200');
 
         getResult.success(function(data) {
 //            alert("success:" + data);
@@ -94,7 +94,7 @@ function UserDetailCtrl($scope, $routeParams, $http) {
         var deltaRouletteXP = $scope.user.roulette.xp - $scope.userOriginal.roulette.xp;
         
         var data = "{\"id\":"+$scope.user.id+",\"deltaBalance\":"+deltaBalance+",\"deltaGeneralXP\":"+deltaGeneralXP+",\"deltaBlackjackXP\":"+deltaBlackjackXP+",\"deltaSlotsXP\":"+deltaSlotsXP+",\"deltaRouletteXP\":"+deltaRouletteXP+"}";
-        var putResult = $http.put(serverURL + '/user/'+$scope.user.id, data);
+        var putResult = $http.put(config.serverURL + '/user/'+$scope.user.id, data);
 
         putResult.success(function(data) {
             alert("success:" + data);
