@@ -25,20 +25,20 @@
       <!--</ul>-->
 
 
-        <ul class="phones">
-            <li ng-repeat="level in levels" class="thumbnail">
-                <p>{{level.level}}</p>
-                <p>{{level.threshold}}</p>
+        <!--<ul class="phones">-->
+            <ul ng-repeat="level in levels" class="thumbnail">
+
+                <li><a href="#/levelEdit/{{level.level}}">Level:{{level.level}} </a></li>
+                <li>Threshold:{{level.threshold}}</li>
                 <ul ng-repeat="reward in level.rewards">
                     <!--<p>{{reward.rewardType}}</p>-->
                     <!--<p>{{reward.amount}}</p>-->
-                reward:{{reward.rewardType}}
-                amount:{{reward.amount}}
+                    <li>reward:{{reward.rewardType}} , amount:{{reward.amount}}</li>
 
                 </ul>
                 </br>
-            </li>
-        </ul>
+            </ul>
+        <!--</ul>-->
 
     </div>
   </div>

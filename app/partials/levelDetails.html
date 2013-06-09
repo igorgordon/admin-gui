@@ -1,0 +1,26 @@
+<div class="container-fluid">
+
+
+    <form ng-submit="update()" ng-controller="LevelDetailCtrl">
+            <div class="row">
+
+            <div class="span4>">
+                Level Details:
+                <ul>
+                    <li>Level:{{level.level}}</li>
+                    <li>Treshold:<input type="text" ng-model="level.threshold"  value="level.threshold" required=""/></li>
+
+
+                    <ul ng-repeat="reward in level.rewards" class="thumbnail">
+
+                        <li>Reward amount<input type="text" ng-model="reward.amount"  value="reward.amount" required=""/></li>
+                        <li>Reward type<input type="text" ng-model="reward.rewardType"  value="reward.rewardType" required=""/></li>
+
+                    </ul>
+                    </ul>
+            </div>
+        </div>
+
+        <button ng-click="update()">SAVE</button>
+    </form>
+</div>

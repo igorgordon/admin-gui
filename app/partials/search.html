@@ -1,10 +1,15 @@
-<div class="container-fluid">
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
 
   <div class="span10">
 
-      <form ng-submit="searchServer()" ng-controller="SearchCtrl">
+      <form name = "searchSubmitter" ng-submit="searchServer()" ng-controller="SearchCtrl">
           Enter text and hit enter:
           <input type="text" ng-model="text" name="text" />
+
+
+          <br>
+          <input id="socialID" ng-model="myFlag" value="social" type="radio" name="group1">SocialID</input>
+          <input id="nameLastName" ng-model="myFlag" value="name" type="radio" name="group1">By name</input></br>
           <input type="submit" id="submit" value="Submit" />
       </form>
     </div>

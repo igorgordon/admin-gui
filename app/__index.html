@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="phonecat">
+    <head>
+        <meta charset="utf-8">
+        <title>Mockup site:5</title>
+
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <!--<meta name="description" content="">-->
+        <!--<meta name="author" content="">-->
+
+        <!--<style type="text/css">-->
+            <!--body {-->
+                <!--padding-top: 60px;-->
+                <!--padding-bottom: 40px;-->
+            <!--}-->
+        <!--</style>-->
+<!--
+        <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+-->
+
+        <link rel="stylesheet" href="css/app.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+
+        <script src="lib/angular/angular.min.js"/>
+        <script src="lib/angular/angular-ui-router.min.js"/>
+        <script src="lib/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"/>
+        <script src="lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"/>
+        <script src="lib/angular/angular-resource.js"/>
+
+        <script src="js/app.js"/>
+        <script src="js/controllers.js"/>
+        <script src="js/filters.js"/>
+        <script src="js/services.js"/>
+
+
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar">how to</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="index.html">Admin GUI</a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="levelProgression.html">level Progression</a></li>
+                            <li><a href="navbar-examples.html">Edit users</a></li>              
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="hero-unit">
+                <p>Admin panel</p>
+            </div>
+
+            <div class="row">
+<!--
+                <div class="span4">
+                    <h2>User:</h2>
+                    <p>Find users</p>
+                    <input type="text" />
+                    <input type="button" value="search"/>
+                 
+                </div>
+-->
+
+                <div ng-view>
+
+                </div>
+
+                <div class="span4">
+                    <h2>Level progression:</h2>
+                    <p>See and edit level progression</p>
+                       <p><a href="levelProgression.html">edit</a></p>
+                    
+                    <p><a class="btn" href="navbar-examples.html">Go there &raquo;</a></p>
+                </div>
+            </div><!-- end row 1 -->
+
+            <hr>
+
+
+            <footer>
+            </footer>
+
+            <div ui-view="viewA"></div>
+            <div ui-view="viewB"></div>
+            <!-- Also a way to navigate -->
+            <a href="#/route1">Route 1</a>
+            <a href="#/route2">Route 2</a>
+
+
+        </div>
+
+      <!--  <script src="/app/lib/bootstrap/js/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+        <script src="lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+        <script src="js/services.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>-->
+
+    </body>
+</html>
